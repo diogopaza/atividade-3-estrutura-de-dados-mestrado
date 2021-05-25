@@ -1,0 +1,26 @@
+---
+title: "listas"
+output: html_document
+---
+
+```{r }
+
+library(tidyr)
+library(dplyr)
+library(tibble)
+library("readxl")
+library(ggplot2)
+
+media_listas <- read.table("/home/usuaio/Documentos/mestrado-2020/estrutura_de_dados/listas/tabela_listas_1048576.csv",dec=".", sep=";",h=T)
+
+
+tempo_buscas_listas <- read.table("file:///home/usuaio/Documentos/mestrado-2020/estrutura_de_dados/listas/tempos_medios.csv",dec=".", sep=";",h=T)
+tempo_buscas_listas
+
+teste <- read.csv("file:///home/usuaio/Documentos/mestrado-2020/estrutura_de_dados/listas/tempos_medios.csv")
+
+teste
+
+```
+
+

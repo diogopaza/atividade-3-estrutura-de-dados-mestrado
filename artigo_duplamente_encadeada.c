@@ -9,7 +9,7 @@ struct No{
 };
 typedef struct No No;
 char nome_busca[30];
-int tamanho=32768,resultado,posicao=0;
+int tamanho=65536,resultado,posicao=0;
 int numerosSorteados[100], *vetorPreenchido;
 FILE *arquivo, *arquivo2;
 double tempo_execucao,tempo_criacao_lista,tempo_criacao_lista_ordenada,
@@ -233,12 +233,12 @@ int main(){
     
     Lista *li = cria_lista();
     Lista *liOrdenada = cria_lista();
-    preencheVetor(0,32000,tamanho);
+    preencheVetor(0,131000,tamanho);
     start = clock();   
     preencheListas(li, liOrdenada);
    
 
-    sortearNumerosTestarALgoritmos(numerosSorteados, 0,8000);
+    sortearNumerosTestarALgoritmos(numerosSorteados, 0,65000);
     criarArquivoCsv();
 
 	fprintf(arquivo,"Busca;Posicao;Valor_Pesquisado;Tempo_Execucao;Tempo_Insercao_Lista;Tamanho_Vetor\n");
@@ -276,7 +276,7 @@ int main(){
     fprintf(arquivo2,"%lf; %lf %i\n", tempo_execucao_busca_sequencial,tempo_execucao_busca_binaria,tamanho);
     
     printf("Busca executada\n");
-    imprime_lista_inicio_ao_fim(liOrdenada);
+   // imprime_lista_inicio_ao_fim(liOrdenada);
     free(li);
     free(liOrdenada);
     return 0;
